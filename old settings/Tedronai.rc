@@ -1,0 +1,290 @@
+# this does not work, but I wish it would
+bindkey = [1] CMD_NO_CMD_DEFAULT
+bindkey = [2] CMD_NO_CMD_DEFAULT
+bindkey = [3] CMD_NO_CMD_DEFAULT
+bindkey = [4] CMD_NO_CMD_DEFAULT
+bindkey = [6] CMD_NO_CMD_DEFAULT
+bindkey = [7] CMD_NO_CMD_DEFAULT
+bindkey = [8] CMD_NO_CMD_DEFAULT
+bindkey = [9] CMD_NO_CMD_DEFAULT
+
+tile_cell_pixels = 48
+
+##################
+# General Settings
+##################
+auto_drop_chunks        = rotten
+auto_eat_chunks         = true
+auto_sacrifice          = true
+autofight_stop          = 50
+default_manual_training = true
+easy_confirm            = all
+easy_eat_chunks         = true
+easy_eat_contaminated   = true
+easy_eat_gourmand       = true
+explore_delay           = -1
+fake_lang               = butt,grunt
+note_chat_messages      = true
+prefer_safe_chunks      = true
+rest_delay              = -1
+rest_wait_both          = true
+show_more               = false
+show_travel_trail       = false
+travel_delay            = -1
+user_note_prefix        = --
+
+#######################
+# Custom Glyph Settings
+#######################
+char_set      = default
+display_char += door_closed   : ◼
+display_char += item_book     : ∞
+display_char += wall          : █
+mon_glyph     = ancient lich  : lightmagenta
+mon_glyph     = greater mummy : lightmagenta
+mon_glyph     = player        : ☻
+
+# this should make console look more consistent
+feature += rock wall{,,brown}
+feature += slime covered rock{,,lightgreen}
+feature += stone wall{,,grey}
+feature += metal wall{,,darkgrey}
+feature += translucent.*rock{,,lightcyan}
+feature += translucent.*stone{,,cyan}
+feature += translucent.*metal{,,cyan}
+feature += unnaturally hard.*wall{,,magenta}
+feature += the floor{,,lightgrey}
+
+####################
+# Dump File Settings
+####################
+dump_order  = header, hiscore, stats, misc, inventory,
+dump_order += skills, spells, overview, mutations, messages, screenshot, monlist,
+dump_order += vaults, notes, turns_by_place, kills_by_place, action_counts, kills
+
+###################
+# Auto Inscriptions
+###################
+autoinscribe += curare:!f
+autoinscribe += rod:!a
+autoinscribe += scroll.*blinking:!r
+autoinscribe += scroll.*fear:!r
+autoinscribe += scroll.*fog:!r
+autoinscribe += scroll.*immolation:!r
+autoinscribe += scroll.*recharging:!r
+autoinscribe += throwing net:!f
+
+##############################################
+# Events which enforce the more message prompt
+##############################################
+#force_more_message += .*comes into view.*wielding.*runed
+#force_more_message += .*comes into view.*wielding.*glowing
+force_more_message += (starving|devoid of blood)
+force_more_message += A sentinel's mark forms upon you
+force_more_message += You feel less protected from missiles
+force_more_message += Ouch! That really hurt!
+force_more_message += Space bends around you
+force_more_message += Space warps.*around you
+force_more_message += The mighty Pandemonium lord .* resides here
+force_more_message += You are starting to lose your buoyancy
+force_more_message += You feel yourself come back to life
+force_more_message += You have finished your manual of
+force_more_message += You lose control over your flight
+force_more_message += Your icy armour evaporates
+force_more_message += You start to feel a little slower
+force_more_message += calcifying dust hits
+force_more_message += caustic.* comes? into view
+force_more_message += curse toe.*comes? into view
+force_more_message += Deactivating autopickup
+force_more_message += hits you.*distortion
+force_more_message += lose consciousness
+force_more_message += is wielding.*chaos
+force_more_message += is wielding.*distortion
+force_more_message += is wielding.*electrocution
+force_more_message += is wielding.*venom
+force_more_message += Your.*skill increases to level 5
+force_more_message += Your.*skill increases to level 10
+force_more_message += Your.*skill increases to level 15
+force_more_message += Your.*skill increases to level 20
+
+: if you.god() == "Xom" then
+force_more_message += god:
+: end
+
+force_more_message += ([Ff]iend|[Hh]ellion|[Tt]ormentor,[Ll]ich).*comes? into view
+force_more_message += (Agnes|Aizul|Arachne|Asmodeus|Antaeus|Azrael).*comes? into view
+force_more_message += (Blork|Boris|Cerebov).*comes? into view
+force_more_message += (Dispater|Dissolution|Donald|Dowan|Duvessa).*comes? into view
+force_more_message += (Edmund|Enchantress|Ereshkigal|Erica|Erolcha|Eustachio).*comes? into view
+force_more_message += (Fannar|Frances|Frederick).*comes? into view
+force_more_message += (Gastronok|Geryon|Grinder|Grum).*comes? into view
+force_more_message += (Harold|Ignacio|Ijyb|Ilsuiw).*comes? into view
+force_more_message += (Jorgrun|Jory|Joseph|Josephine).*comes? into view
+force_more_message += (Ribbit|Roka).*comes? into view
+force_more_message += (Khufu|Kirke).*comes? into view
+force_more_message += (Lamia|Leanaean|Lobon|Louise).*comes? into view
+force_more_message += (Mara|Margery|Maud|Maurice|Menkaure|Mennas|Mnoleg|Murray).*comes? into view
+force_more_message += (Nellie|Nergalle|Nessos|Nikola|Norris).*comes? into view
+force_more_message += (Pikel|Polyphemus|Psyche|Purgy).*comes? into view
+force_more_message += (royal jelly|Roxanne|Rupert).*comes? into view
+force_more_message += (Serpent of Hell|Sigmund|Sojobo|Sonja|Snorg).*comes? into view
+force_more_message += (Terence|Tiamat).*comes? into view
+force_more_message += (Urug|Vloq|Wiglaf|Xtahua|Yiuf).*comes? into view
+force_more_message += ([Hh]ydr|[Oo]klob).*comes? into view
+
+# rotting chunks are annoying
+runrest_ignore_message += in your inventory.*rotted away
+
+##########################################
+# Fixed spell slots for my favorite spells
+##########################################
+spell_slot += Apportation:A
+spell_slot += Blink:B
+spell_slot += Control Teleport:C
+spell_slot += Deflect Missiles:M
+spell_slot += Dispel Undead:u
+spell_slot += Fireball:f
+spell_slot += Flight:F
+spell_slot += Haste:H
+spell_slot += Iskenderun's Battlesphere:p
+spell_slot += Orb of Destruction:o
+spell_slot += Portal Projectile:P
+spell_slot += Regeneration:R
+spell_slot += Repel Missiles:m
+spell_slot += Silence:S
+spell_slot += Spectral Weapon:w
+spell_slot += Swiftness:h
+
+########################################
+# Fixed item slots for my favorite items
+########################################
+item_slot ^= amulet of guardian spirit:G
+item_slot ^= amulet of regeneration:R
+item_slot ^= amulet of resist corrosion:C
+item_slot ^= amulet of resist mutation:Mm
+item_slot ^= arrows?:Q
+item_slot ^= blowgun:b
+item_slot ^= bolts?:Q
+item_slot ^= ring of poison resistance:P
+item_slot ^= ring of protection from cold:I
+item_slot ^= ring of protection from fire:F
+item_slot ^= ring of protection from magic:Mm
+item_slot ^= ring of see invisible:S
+item_slot ^= ring of wizardry:W
+item_slot ^= scrolls? of blinking:B
+item_slot ^= scrolls? of fear:e
+item_slot ^= scrolls? of fog:f
+item_slot ^= scrolls? of identify:i
+item_slot ^= scrolls? of recharging:r
+item_slot ^= scrolls? of teleportation:t
+item_slot ^= stones?:Q
+item_slot ^= the ring.*rC\+:I
+item_slot ^= the ring.*rF\+:F
+item_slot ^= wand of digging:D
+item_slot ^= wand of disintegration:d
+item_slot ^= wand of hasting:H
+item_slot ^= wand of heal wounds:h
+item_slot ^= wand of teleportation:T
+
+#############################
+# Custom Autopickup behaviour
+#############################
+autopickup_exceptions += useless_item
+autopickup_exceptions += dangerous_item
+autopickup_exceptions += evil_item
+autopickup_exceptions += amulet of (inaccuracy|the gourmand|controlled flight|warding|stasis)
+autopickup_exceptions += amulet of (resist .*|clarity|rage|conservation|guardian spirit|faith)
+autopickup_exceptions += ring of (see invisible|flight|poison resistance|teleportation)
+autopickup_exceptions += ring of (invisibility|teleport control|fire|ice)
+autopickup_exceptions += ring of (sustain abilities|sustenance|wizardry|life protection)
+autopickup_exceptions += potion of lignification
+: if you.race() ~= "Vampire" then
+autopickup_exceptions += potion of blood
+: end
+autopickup_exceptions += wand of random effects
+autopickup_exceptions += staff of .*
+autopickup_exceptions += <lamp of fire
+autopickup_exceptions += <phial of floods
+autopickup_exceptions += <fan of gales
+autopickup_exceptions ^= <scroll.*immolation
+
+######################
+# Custom Lua Functions
+######################
+{
+
+function autopickup(it, name)
+  if it.is_useless then
+    return
+  end
+  if it.artefact then
+    return true
+  end
+  local class  = it.class(true)
+  if class == "armour" then
+    local good_slots = {cloak="Cloak", helmet="Helmet",
+                        gloves="Gloves", boots="Boots"}
+    st, _ = it.subtype()
+    if good_slots[st] ~= nil and items.equipped_at(good_slots[st]) == nil then
+      return true
+    end
+  end
+  if class == "missile" then
+    if name:find("curare") then
+      return true
+    end
+    if name:find("throwing net") then
+      return true
+    end
+  end
+  return
+end
+
+add_autopickup_func(autopickup)
+
+function hp_is_low()
+  local hp, mhp = you.hp()
+  return (100*hp <= 50*mhp)
+end
+
+local glyph_is_happy = true
+
+function update_glyph()
+  local low_hp = hp_is_low()
+  if low_hp and glyph_is_happy then
+    crawl.setopt("mon_glyph = player : ☹")
+    glyph_is_happy = false
+  elseif not low_hp and not glyph_is_happy then
+    crawl.setopt("mon_glyph = player : ☻")
+    glyph_is_happy = true
+  end
+end
+
+function dirty_channel()
+  crawl.sendkeys('0' .. '5' .. '0' .. 'v')
+end
+
+local need_skills_opened = true
+
+function ready()
+  update_glyph()
+  if you.turns() == 0 and need_skills_opened then
+    need_skills_opened = false
+    crawl.sendkeys("m")
+  end
+end
+
+function hp_percent() a,b=you.hp() return 100*a/b end
+function mp_percent() a,b=you.mp() return 100*a/b end
+
+function custom_rest()
+  if hp_percent() == 100 and mp_percent() == 100 then
+    if crawl.yesnoquit("WAIT 100 TURNS???", true, 'n') == 1 then
+      crawl.process_keys("5")
+    end
+  else
+    crawl.process_keys("5")
+  end
+end
+
+}
