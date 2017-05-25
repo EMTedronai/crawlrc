@@ -1,0 +1,355 @@
+######################################################################
+#                          General Settings                          #
+######################################################################
+
+auto_butcher            = true
+auto_eat_chunks         = true
+auto_sacrifice          = true
+autofight_stop          = 50
+clear_messages          = true
+default_manual_training = true
+easy_confirm            = all
+easy_eat_chunks         = true
+explore_delay           = 10
+note_chat_messages      = true
+rest_delay              = -1
+rest_wait_both          = true
+show_more               = true
+show_travel_trail       = false
+simple_targeting        = true
+travel_delay            = -1
+user_note_prefix        = --
+
+# Mute summons messages.
+message_colour ^= mute:Your.*(bites|misses|hits|claws|gores)
+
+######################################################################
+#                          Console Settings                          #
+######################################################################
+
+allow_extended_colours          = true
+best_effort_brighten_background = false
+blink_brightens_background      = false
+bold_brightens_foreground       = true
+char_set                        = default
+no_dark_brand                   = false
+
+# Override the some of the default glyphs with the old unicode glyphs
+# [·]
+display_char = floor       : \x00b7
+# [◦]
+display_char = floor_magic : \x25e6
+# [∞]
+display_char = item_book   : \x221e
+
+mon_glyph ^= ancient lich  : lightmagenta
+mon_glyph ^= greater mummy : lightmagenta
+
+# [✱] Make orbs of fire, wretched stars, etc. more visible.
+mon_glyph ^= * : \x2731
+
+# [☻] Use a smiley as the player glyph.
+mon_glyph ^= player : yellow \x263b
+
+# Enrage webtiles anons
+tile_display_mode = glyphs
+
+######################################################################
+#                           Character Dump                           #
+######################################################################
+
+dump_order  = header, hiscore, stats, misc, inventory, skills, spells
+dump_order += overview, mutations, messages, screenshot, monlist, vaults
+dump_order += notes, turns_by_place, kills_by_place, skill_gains
+dump_order += action_counts, kills
+note_items += weapon, armour, amulet, ring of, potion, scroll
+
+# Use the notes in the character dump to spoil information about whether an
+# enemy has been seen before (i.e. have I now killed the same demonologist
+# from which I have fled earlier or was this a different one?).
+note_monsters += Brimstone Fiend
+note_monsters += Ice Fiend
+note_monsters += Tzitzimitl
+note_monsters += caustic shrike
+note_monsters += curse skull
+note_monsters += curse toe
+note_monsters += deep elf demonologist
+note_monsters += deep elf sorcerer
+note_monsters += entropy weaver
+note_monsters += lich
+
+######################################################################
+#                         Auto Inscriptions                          #
+######################################################################
+
+autoinscribe += curare:!f
+autoinscribe += rod:!a
+autoinscribe += scroll.*blinking:!r
+autoinscribe += scroll.*fear:!r
+autoinscribe += scroll.*fog:!r
+autoinscribe += scroll.*immolation:!r
+autoinscribe += scroll.*recharging:!r
+autoinscribe += throwing net:!f
+
+######################################################################
+#                        Force More Messages                         #
+######################################################################
+
+force_more_message += (starving|devoid of blood)
+force_more_message += A sentinel's mark forms upon you
+force_more_message += Deactivating autopickup
+force_more_message += Ouch! That really hurt!
+force_more_message += Space bends around you
+force_more_message += Space warps.*around you
+force_more_message += The mighty Pandemonium lord .* resides here
+force_more_message += You are starting to lose your buoyancy
+force_more_message += You feel less protected from missiles
+force_more_message += You feel you are being watched by something
+force_more_message += You feel your power leaking away
+force_more_message += You feel yourself come back to life
+force_more_message += You have finished your manual of
+force_more_message += You lose control over your flight
+force_more_message += You now have enough gold to buy
+force_more_message += You start to feel a little slower
+force_more_message += Your icy armour evaporates
+force_more_message += calcifying dust hits
+force_more_message += caustic.* comes? into view
+force_more_message += curse toe.*comes? into view
+force_more_message += dream sheep.*comes? into view
+force_more_message += entropy weaver.*comes? into view
+force_more_message += hits you.*distortion
+force_more_message += is wielding.*of
+force_more_message += zaps a wand
+force_more_message += invokes the power of Zot
+force_more_message += dispelling energy hits you
+force_more_message += lose consciousness
+
+: if you.god() == "Xom" then
+force_more_message += god:
+: end
+
+force_more_message += 27-headed.*(comes? into|opens the|appears? from)
+force_more_message += Agnes.*(comes? into|opens the|appears? from)
+force_more_message += Aizul.*(comes? into|opens the|appears? from)
+force_more_message += Antaeus.*(comes? into|opens the|appears? from)
+force_more_message += Arachne.*(comes? into|opens the|appears? from)
+force_more_message += Asmodeus.*(comes? into|opens the|appears? from)
+force_more_message += Asterion.*(comes? into|opens the|appears? from)
+force_more_message += Azrael.*(comes? into|opens the|appears? from)
+force_more_message += Blork the orc.*(comes? into|opens the|appears? from)
+force_more_message += Boris.*(comes? into|opens the|appears? from)
+force_more_message += Cerebov.*(comes? into|opens the|appears? from)
+force_more_message += Crazy Yiuf.*(comes? into|opens the|appears? from)
+force_more_message += Dispater.*(comes? into|opens the|appears? from)
+force_more_message += Dissolution.*(comes? into|opens the|appears? from)
+force_more_message += Donald.*(comes? into|opens the|appears? from)
+force_more_message += Dowan.*(comes? into|opens the|appears? from)
+force_more_message += Duvessa.*(comes? into|opens the|appears? from)
+force_more_message += Edmund.*(comes? into|opens the|appears? from)
+force_more_message += Enchantress.*(comes? into|opens the|appears? from)
+force_more_message += Ereshkigal.*(comes? into|opens the|appears? from)
+force_more_message += Erica.*(comes? into|opens the|appears? from)
+force_more_message += Erolcha.*(comes? into|opens the|appears? from)
+force_more_message += Eustachio.*(comes? into|opens the|appears? from)
+force_more_message += Fannar.*(comes? into|opens the|appears? from)
+force_more_message += Frances.*(comes? into|opens the|appears? from)
+force_more_message += Francis.*(comes? into|opens the|appears? from)
+force_more_message += Frederick.*(comes? into|opens the|appears? from)
+force_more_message += Gastronok.*(comes? into|opens the|appears? from)
+force_more_message += Geryon.*(comes? into|opens the|appears? from)
+force_more_message += Gloorx Vloq.*(comes? into|opens the|appears? from)
+force_more_message += Grinder.*(comes? into|opens the|appears? from)
+force_more_message += Grum.*(comes? into|opens the|appears? from)
+force_more_message += Harold.*(comes? into|opens the|appears? from)
+force_more_message += Ignacio.*(comes? into|opens the|appears? from)
+force_more_message += Ijyb.*(comes? into|opens the|appears? from)
+force_more_message += Ilsuiw.*(comes? into|opens the|appears? from)
+force_more_message += Jorgrun.*(comes? into|opens the|appears? from)
+force_more_message += Jory.*(comes? into|opens the|appears? from)
+force_more_message += Jessica.*(comes? into|opens the|appears? from)
+force_more_message += Joseph.*(comes? into|opens the|appears? from)
+force_more_message += Josephine.*(comes? into|opens the|appears? from)
+force_more_message += Jozef.*(comes? into|opens the|appears? from)
+force_more_message += Khufu.*(comes? into|opens the|appears? from)
+force_more_message += Kirke.*(comes? into|opens the|appears? from)
+force_more_message += Lamia.*(comes? into|opens the|appears? from)
+force_more_message += Lom Lobon.*(comes? into|opens the|appears? from)
+force_more_message += Louise.*(comes? into|opens the|appears? from)
+force_more_message += Mara.*(comes? into|opens the|appears? from)
+force_more_message += Margery.*(comes? into|opens the|appears? from)
+force_more_message += Maud.*(comes? into|opens the|appears? from)
+force_more_message += Maurice.*(comes? into|opens the|appears? from)
+force_more_message += Menkaure.*(comes? into|opens the|appears? from)
+force_more_message += Mennas.*(comes? into|opens the|appears? from)
+force_more_message += Mnoleg.*(comes? into|opens the|appears? from)
+force_more_message += Murray.*(comes? into|opens the|appears? from)
+force_more_message += Natasha.*(comes? into|opens the|appears? from)
+force_more_message += Nergalle.*(comes? into|opens the|appears? from)
+force_more_message += Nessos.*(comes? into|opens the|appears? from)
+force_more_message += Nikola.*(comes? into|opens the|appears? from)
+force_more_message += Norris.*(comes? into|opens the|appears? from)
+force_more_message += Pikel.*(comes? into|opens the|appears? from)
+force_more_message += Polyphemus.*(comes? into|opens the|appears? from)
+force_more_message += Prince Ribbit.*(comes? into|opens the|appears? from)
+force_more_message += Psyche.*(comes? into|opens the|appears? from)
+force_more_message += Purgy.*(comes? into|opens the|appears? from)
+force_more_message += Robin.*(comes? into|opens the|appears? from)
+force_more_message += Roxanne.*(comes? into|opens the|appears? from)
+force_more_message += Rupert.*(comes? into|opens the|appears? from)
+force_more_message += Saint Roka.*(comes? into|opens the|appears? from)
+force_more_message += Sigmund.*(comes? into|opens the|appears? from)
+force_more_message += Snorg.*(comes? into|opens the|appears? from)
+force_more_message += Sojobo.*(comes? into|opens the|appears? from)
+force_more_message += Sonja.*(comes? into|opens the|appears? from)
+force_more_message += Terence.*(comes? into|opens the|appears? from)
+force_more_message += The Lernaean.*(comes? into|opens the|appears? from)
+force_more_message += The royal.*(comes? into|opens the|appears? from)
+force_more_message += The Serpent of.*(comes? into|opens the|appears? from)
+force_more_message += Tiamat.*(comes? into|opens the|appears? from)
+force_more_message += Urug.*(comes? into|opens the|appears? from)
+force_more_message += Vashnia.*(comes? into|opens the|appears? from)
+force_more_message += Wiglaf.*(comes? into|opens the|appears? from)
+force_more_message += Xtahua.*(comes? into|opens the|appears? from)
+
+# rotting chunks are annoying
+runrest_ignore_message += in your inventory.*rotted away
+
+######################################################################
+#                            Spell Slots                             #
+######################################################################
+
+spell_slot += Apportation:A
+spell_slot += Blink:B
+spell_slot += Control Teleport:C
+spell_slot += Deflect Missiles:M
+spell_slot += Dispel Undead:u
+spell_slot += Fireball:f
+spell_slot += Flight:F
+spell_slot += Haste:H
+spell_slot += Iskenderun's Battlesphere:p
+spell_slot += Orb of Destruction:o
+spell_slot += Portal Projectile:P
+spell_slot += Regeneration:R
+spell_slot += Repel Missiles:m
+spell_slot += Silence:S
+spell_slot += Spectral Weapon:w
+spell_slot += Swiftness:h
+
+######################################################################
+#                             Item Slots                             #
+######################################################################
+
+item_slot ^= amulet of guardian spirit:G
+item_slot ^= amulet of regeneration:R
+item_slot ^= amulet of resist mutation:Mm
+item_slot ^= arrows?:Q
+item_slot ^= blowgun:b
+item_slot ^= bolts?:Q
+item_slot ^= ring of poison resistance:P
+item_slot ^= ring of positive energy:N
+item_slot ^= ring of protection from cold:I
+item_slot ^= ring of protection from fire:F
+item_slot ^= ring of protection from magic:Mm
+item_slot ^= ring of resist corrosion:C
+item_slot ^= ring of see invisible:S
+item_slot ^= ring of wizardry:W
+item_slot ^= scrolls? of blinking:B
+item_slot ^= scrolls? of fear:e
+item_slot ^= scrolls? of fog:f
+item_slot ^= scrolls? of identify:i
+item_slot ^= scrolls? of recharging:r
+item_slot ^= scrolls? of teleportation:t
+item_slot ^= stones?:Q
+item_slot ^= the ring.*rC\+:I
+item_slot ^= the ring.*rF\+:F
+item_slot ^= wand of digging:D
+item_slot ^= wand of disintegration:d
+item_slot ^= wand of hasting:H
+item_slot ^= wand of heal wounds:h
+item_slot ^= wand of teleportation:T
+
+######################################################################
+#                            Auto Pickup                             #
+######################################################################
+
+autopickup_exceptions += useless_item
+autopickup_exceptions += dangerous_item
+autopickup_exceptions += evil_item
+autopickup_exceptions += amulet of (inaccuracy|the gourmand)
+autopickup_exceptions += amulet of (clarity|rage||guardian spirit|faith)
+autopickup_exceptions += ring of (see invisible|flight|poison resistance)
+autopickup_exceptions += ring of (invisibility|teleportation|fire|ice)
+autopickup_exceptions += ring of (sustain abilities|wizardry|life protection)
+autopickup_exceptions += potion of lignification
+: if you.race() ~= "Vampire" then
+autopickup_exceptions += potion of blood
+: end
+autopickup_exceptions += wand of random effects
+autopickup_exceptions += staff of .*
+autopickup_exceptions += <lamp of fire
+autopickup_exceptions += <phial of floods
+autopickup_exceptions += <fan of gales
+autopickup_exceptions ^= <scroll.*immolation
+
+######################################################################
+#                            Macro Setup                             #
+######################################################################
+
+macros += M 1 za
+macros += M 2 zb
+macros += M 3 zc
+macros += M 4 zd
+macros += M 5 ===custom_rest
+macros += M 6 ===set_target_skill
+macros += M 9 ===custom_channel
+macros += M F f.
+
+######################################################################
+#                        Custom Lua Functions                        #
+######################################################################
+
+{
+--@@@ lua/autopickup.lua
+
+--@@@ lua/custom_rest.lua
+
+--@@@ lua/smiley_glyph.lua
+
+--@@@ lua/staff_channel.lua
+
+--@@@ lua/target_skill.lua
+
+----------------------------------------------------------------------
+--                          Ready Function                          --
+----------------------------------------------------------------------
+
+function ready()
+  -- update the happy status of the player glyph
+  update_glyph()
+
+  -- Invoke target skill monitoring
+  prev_need_target = need_target_skill
+  if prev_need_target == nil
+  and (you.turns() == 0 or c_persist.target_skill == nil) then
+    set_new_skill_training()
+  end
+  if prev_need_target then
+    set_target_skill()
+    need_target_skill = false
+  elseif not need_target_skill then
+    check_skills()
+  end
+
+  -- Change back to the original weapon if it was changed by channeling
+  -- and no enemies are in LOS.
+  if channel_switched_weapon then
+    if not is_enemy_in_los() then
+        crawl.sendkeys('w' .. pre_channel_slot)
+    end
+
+    pre_channel_slot        = nil
+    channel_switched_weapon = false
+  end
+end
+
+}

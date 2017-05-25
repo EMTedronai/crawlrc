@@ -1,0 +1,38 @@
+# Settings I used to have in my RC but am no longer using.
+
+# Force all movements to be deliberate while enemies are in LOS.
+bindkey = [B] CMD_MOVE_DOWN_LEFT
+bindkey = [H] CMD_MOVE_LEFT
+bindkey = [J] CMD_MOVE_DOWN
+bindkey = [K] CMD_MOVE_UP
+bindkey = [L] CMD_MOVE_RIGHT
+bindkey = [N] CMD_MOVE_DOWN_RIGHT
+bindkey = [U] CMD_MOVE_UP_RIGHT
+bindkey = [Y] CMD_MOVE_UP_LEFT
+bindkey = [b] CMD_SAFE_MOVE_DOWN_LEFT
+bindkey = [h] CMD_SAFE_MOVE_LEFT
+bindkey = [j] CMD_SAFE_MOVE_DOWN
+bindkey = [k] CMD_SAFE_MOVE_UP
+bindkey = [l] CMD_SAFE_MOVE_RIGHT
+bindkey = [n] CMD_SAFE_MOVE_DOWN_RIGHT
+bindkey = [u] CMD_SAFE_MOVE_UP_RIGHT
+bindkey = [y] CMD_SAFE_MOVE_UP_LEFT
+
+# Walls/doors taken from the old unicode glyphs.
+display_char = door_closed : \x25fc # ◼
+display_char = door_open   : '
+display_char = permawall   : \x2593 # ▓
+display_char = wall        : \x2592 # ▒
+display_char = wall_magic  : \x2591 # ░
+
+# Don't use special coloring for the various branches.
+feature += metal wall{,,darkgrey}
+feature += rock wall{,,brown}
+feature += slime covered rock{,,lightgreen}
+feature += stone wall{,,grey}
+feature += the floor{,,lightgrey}
+feature += translucent.*metal{,,cyan}
+feature += translucent.*rock{,,lightcyan}
+feature += translucent.*stone{,,cyan}
+feature += unnaturally hard.*wall{,,magenta}
+
