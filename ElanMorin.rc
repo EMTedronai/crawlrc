@@ -49,7 +49,7 @@ mon_glyph ^= greater mummy : lightmagenta
 mon_glyph ^= * : \x2731
 
 # [☻] Use a smiley as the player glyph.
-mon_glyph ^= player : yellow \x263b
+mon_glyph ^= player : \x263b
 
 # Enrage webtiles anons
 tile_display_mode = glyphs
