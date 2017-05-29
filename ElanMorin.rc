@@ -32,7 +32,6 @@ best_effort_brighten_background = false
 blink_brightens_background      = false
 bold_brightens_foreground       = true
 char_set                        = default
-no_dark_brand                   = false
 
 # Override the some of the default glyphs with the old unicode glyphs
 # [·]
