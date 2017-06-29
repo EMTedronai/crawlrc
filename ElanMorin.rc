@@ -23,6 +23,9 @@ user_note_prefix        = --
 # Mute summons messages.
 message_colour ^= mute:Your.*(bites|misses|hits|claws|gores)
 
+# Disable ranged animations (beam spells and ranged weapons)
+use_animations -= beam
+
 ######################################################################
 #                          Console Settings                          #
 ######################################################################
