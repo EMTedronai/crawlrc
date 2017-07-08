@@ -10,15 +10,20 @@ clear_messages          = true
 default_manual_training = true
 easy_confirm            = all
 easy_eat_chunks         = true
-explore_delay           = 10
+explore_delay           = -1
+fake_lang               = butt,grunt
 note_chat_messages      = true
 rest_delay              = -1
 rest_wait_both          = true
 show_more               = true
-show_travel_trail       = false
+show_travel_trail       = true
 simple_targeting        = true
 travel_delay            = -1
 user_note_prefix        = --
+
+: if you.race() == "Minotaur" then
+tile_player_tile = MONS:Asterion
+: end
 
 # Mute summons messages.
 message_colour ^= mute:Your.*(bites|misses|hits|claws|gores)
@@ -58,9 +63,6 @@ mon_glyph ^= * : \x2731
 
 # [☻] Use a smiley as the player glyph.
 mon_glyph ^= player : \x263b
-
-# Enrage webtiles anons
-tile_display_mode = glyphs
 
 ######################################################################
 #                           Character Dump                           #
