@@ -6,6 +6,6 @@ IF ERRORLEVEL 1 (
         EXIT /B
 )
 
-copy /Y ElanMorin.rc crawlrc
+copy /Y CrawlSettings.rc crawlrc
 vim -u NONE -S include_lua_files.vim crawlrc
 
