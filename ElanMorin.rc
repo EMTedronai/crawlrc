@@ -44,6 +44,12 @@ display_char = floor_magic : \x25e6
 # [∞]
 display_char = item_book   : \x221e
 
+# [░, ▒, ▓, █] Custom wall glyphs for non-rock features
+feature += crystal wall               { \x2591 }
+feature += metal wall                 { \x2593 }
+feature += stone wall                 { \x2592 }
+feature += unnaturally hard rock wall { \x2588 }
+
 mon_glyph ^= ancient lich  : lightmagenta
 mon_glyph ^= greater mummy : lightmagenta
 
