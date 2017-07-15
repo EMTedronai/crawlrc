@@ -42,10 +42,10 @@ glyph_is_happy = true
 function update_glyph()
   local low_hp = hp_is_low()
   if low_hp and glyph_is_happy then
-    crawl.setopt("mon_glyph ^= player : \x2639")
+    crawl.setopt("mon_glyph ^= player : x2639")
     glyph_is_happy = false
   elseif not low_hp and not glyph_is_happy then
-    crawl.setopt("mon_glyph ^= player : \x263b")
+    crawl.setopt("mon_glyph ^= player : x263b")
     glyph_is_happy = true
   end
 end

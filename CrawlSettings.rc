@@ -36,31 +36,28 @@ blink_brightens_background      = false
 bold_brightens_foreground       = true
 char_set                        = default
 
-# Override the some of the default glyphs with the old unicode glyphs
-# [·]
-display_char = floor       : \x00b7
-# [◦]
-display_char = floor_magic : \x25e6
-# [∞]
-display_char = item_book   : \x221e
+# Override the some of the default glyphs with the old unicode glyphs.
+display_char = floor       : x00b7
+display_char = floor_magic : x25e6
+display_char = item_book   : x221e
 
-# [░, ▒, ▓, █] Custom wall glyphs for non-rock features
-feature += crystal wall               { \x2591 }
-feature += metal wall                 { \x2593 }
-feature += stone wall                 { \x2592 }
-feature += unnaturally hard rock wall { \x2588 }
+# Custom wall glyphs (░, ▒, ▓, █).
+feature += crystal wall               { x2593, ,           }
+feature += metal wall                 { x2593, ,           }
+feature += stone wall                 { x2592, ,           }
+feature += translucent metal wall     { x2591, , cyan      }
+feature += translucent rock wall      { x2591, , lightcyan }
+feature += translucent stone wall     { x2591, , cyan      }
+feature += unnaturally hard rock wall { x2588, ,           }
 
 mon_glyph ^= ancient lich  : lightmagenta
 mon_glyph ^= greater mummy : lightmagenta
 
-# [✱] Make orbs of fire, wretched stars, etc. more visible.
-mon_glyph ^= * : \x2731
+# Make orbs of fire, wretched stars, etc. more visible (✱).
+mon_glyph ^= *             : x2731
 
-# [☻] Use a smiley as the player glyph.
-mon_glyph ^= player : \x263b
-
-# Enrage webtiles anons
-tile_display_mode = glyphs
+# Use a smiley as the player glyph (☻).
+mon_glyph ^= player        : x263b
 
 ######################################################################
 #                           Character Dump                           #
