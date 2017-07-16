@@ -98,6 +98,107 @@ autoinscribe += scroll.*recharging:!r
 autoinscribe += throwing net:!f
 
 ######################################################################
+#                           Ability Slots                            #
+######################################################################
+
+ability_slot ^= Banish:B
+ability_slot ^= Bribe Branch:B
+ability_slot ^= Call Merchant:M
+ability_slot ^= Corrupt:U
+ability_slot ^= Enter the Abyss:E
+ability_slot ^= Potion Petition:P
+
+######################################################################
+#                             Item Slots                             #
+######################################################################
+
+item_slot ^= amulet of guardian spirit:G
+item_slot ^= amulet of regeneration:R
+item_slot ^= amulet of resist mutation:Mm
+item_slot ^= arrows?:Q
+item_slot ^= blowgun:b
+item_slot ^= bolts?:Q
+item_slot ^= ring of poison resistance:P
+item_slot ^= ring of positive energy:N
+item_slot ^= ring of protection from cold:I
+item_slot ^= ring of protection from fire:F
+item_slot ^= ring of protection from magic:Mm
+item_slot ^= ring of resist corrosion:C
+item_slot ^= ring of see invisible:S
+item_slot ^= ring of wizardry:W
+item_slot ^= scrolls? of blinking:B
+item_slot ^= scrolls? of fear:e
+item_slot ^= scrolls? of fog:f
+item_slot ^= scrolls? of identify:i
+item_slot ^= scrolls? of recharging:r
+item_slot ^= scrolls? of teleportation:t
+item_slot ^= stones?:Q
+item_slot ^= the ring.*rC\+:I
+item_slot ^= the ring.*rF\+:F
+item_slot ^= wand of digging:D
+item_slot ^= wand of disintegration:d
+item_slot ^= wand of hasting:H
+item_slot ^= wand of heal wounds:h
+item_slot ^= wand of teleportation:T
+
+######################################################################
+#                            Spell Slots                             #
+######################################################################
+
+spell_slot += Apportation:A
+spell_slot += Blink:B
+spell_slot += Control Teleport:C
+spell_slot += Deflect Missiles:M
+spell_slot += Dispel Undead:u
+spell_slot += Fireball:f
+spell_slot += Flight:F
+spell_slot += Haste:H
+spell_slot += Iskenderun's Battlesphere:p
+spell_slot += Orb of Destruction:o
+spell_slot += Portal Projectile:P
+spell_slot += Regeneration:R
+spell_slot += Repel Missiles:m
+spell_slot += Silence:S
+spell_slot += Spectral Weapon:w
+spell_slot += Swiftness:h
+
+######################################################################
+#                            Auto Pickup                             #
+######################################################################
+
+autopickup_exceptions += useless_item
+autopickup_exceptions += dangerous_item
+autopickup_exceptions += evil_item
+autopickup_exceptions += amulet of (inaccuracy|the gourmand)
+autopickup_exceptions += amulet of (clarity|rage||guardian spirit|faith)
+autopickup_exceptions += ring of (see invisible|flight|poison resistance)
+autopickup_exceptions += ring of (invisibility|teleportation|fire|ice)
+autopickup_exceptions += ring of (sustain abilities|wizardry|life protection)
+autopickup_exceptions += potion of lignification
+: if you.race() ~= "Vampire" then
+autopickup_exceptions += potion of blood
+: end
+autopickup_exceptions += wand of random effects
+autopickup_exceptions += staff of .*
+autopickup_exceptions += <lamp of fire
+autopickup_exceptions += <phial of floods
+autopickup_exceptions += <fan of gales
+autopickup_exceptions ^= <scroll.*immolation
+
+######################################################################
+#                            Macro Setup                             #
+######################################################################
+
+macros += M 1 za
+macros += M 2 zb
+macros += M 3 zc
+macros += M 4 zd
+macros += M 5 ===custom_rest
+macros += M 6 ===set_target_skill
+macros += M 9 ===custom_channel
+macros += M F f.
+
+######################################################################
 #                        Force More Messages                         #
 ######################################################################
 
@@ -219,96 +320,6 @@ force_more_message += Xtahua.*(comes? into|opens the|appears? from)
 
 # rotting chunks are annoying
 runrest_ignore_message += in your inventory.*rotted away
-
-######################################################################
-#                            Spell Slots                             #
-######################################################################
-
-spell_slot += Apportation:A
-spell_slot += Blink:B
-spell_slot += Control Teleport:C
-spell_slot += Deflect Missiles:M
-spell_slot += Dispel Undead:u
-spell_slot += Fireball:f
-spell_slot += Flight:F
-spell_slot += Haste:H
-spell_slot += Iskenderun's Battlesphere:p
-spell_slot += Orb of Destruction:o
-spell_slot += Portal Projectile:P
-spell_slot += Regeneration:R
-spell_slot += Repel Missiles:m
-spell_slot += Silence:S
-spell_slot += Spectral Weapon:w
-spell_slot += Swiftness:h
-
-######################################################################
-#                             Item Slots                             #
-######################################################################
-
-item_slot ^= amulet of guardian spirit:G
-item_slot ^= amulet of regeneration:R
-item_slot ^= amulet of resist mutation:Mm
-item_slot ^= arrows?:Q
-item_slot ^= blowgun:b
-item_slot ^= bolts?:Q
-item_slot ^= ring of poison resistance:P
-item_slot ^= ring of positive energy:N
-item_slot ^= ring of protection from cold:I
-item_slot ^= ring of protection from fire:F
-item_slot ^= ring of protection from magic:Mm
-item_slot ^= ring of resist corrosion:C
-item_slot ^= ring of see invisible:S
-item_slot ^= ring of wizardry:W
-item_slot ^= scrolls? of blinking:B
-item_slot ^= scrolls? of fear:e
-item_slot ^= scrolls? of fog:f
-item_slot ^= scrolls? of identify:i
-item_slot ^= scrolls? of recharging:r
-item_slot ^= scrolls? of teleportation:t
-item_slot ^= stones?:Q
-item_slot ^= the ring.*rC\+:I
-item_slot ^= the ring.*rF\+:F
-item_slot ^= wand of digging:D
-item_slot ^= wand of disintegration:d
-item_slot ^= wand of hasting:H
-item_slot ^= wand of heal wounds:h
-item_slot ^= wand of teleportation:T
-
-######################################################################
-#                            Auto Pickup                             #
-######################################################################
-
-autopickup_exceptions += useless_item
-autopickup_exceptions += dangerous_item
-autopickup_exceptions += evil_item
-autopickup_exceptions += amulet of (inaccuracy|the gourmand)
-autopickup_exceptions += amulet of (clarity|rage||guardian spirit|faith)
-autopickup_exceptions += ring of (see invisible|flight|poison resistance)
-autopickup_exceptions += ring of (invisibility|teleportation|fire|ice)
-autopickup_exceptions += ring of (sustain abilities|wizardry|life protection)
-autopickup_exceptions += potion of lignification
-: if you.race() ~= "Vampire" then
-autopickup_exceptions += potion of blood
-: end
-autopickup_exceptions += wand of random effects
-autopickup_exceptions += staff of .*
-autopickup_exceptions += <lamp of fire
-autopickup_exceptions += <phial of floods
-autopickup_exceptions += <fan of gales
-autopickup_exceptions ^= <scroll.*immolation
-
-######################################################################
-#                            Macro Setup                             #
-######################################################################
-
-macros += M 1 za
-macros += M 2 zb
-macros += M 3 zc
-macros += M 4 zd
-macros += M 5 ===custom_rest
-macros += M 6 ===set_target_skill
-macros += M 9 ===custom_channel
-macros += M F f.
 
 ######################################################################
 #                        Custom Lua Functions                        #
