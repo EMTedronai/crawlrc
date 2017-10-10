@@ -194,7 +194,6 @@ macros += M 2 zb
 macros += M 3 zc
 macros += M 4 zd
 macros += M 5 ===custom_rest
-macros += M 6 ===set_target_skill
 macros += M 9 ===custom_channel
 macros += M F f.
 
@@ -334,8 +333,6 @@ runrest_ignore_message += in your inventory.*rotted away
 
 --@@@ lua/staff_channel.lua
 
---@@@ lua/target_skill.lua
-
 ----------------------------------------------------------------------
 --                          Ready Function                          --
 ----------------------------------------------------------------------
@@ -344,17 +341,9 @@ function ready()
   -- update the happy status of the player glyph
   update_glyph()
 
-  -- Invoke target skill monitoring
-  prev_need_target = need_target_skill
-  if prev_need_target == nil
-  and (you.turns() == 0 or c_persist.target_skill == nil) then
-    set_new_skill_training()
-  end
-  if prev_need_target then
-    set_target_skill()
-    need_target_skill = false
-  elseif not need_target_skill then
-    check_skills()
+  if (you.turns() == 0) and (skill_target_init == nil)  then
+    skill_target_init = 1
+    crawl.sendkeys("m")
   end
 
   -- Change back to the original weapon if it was changed by channeling
