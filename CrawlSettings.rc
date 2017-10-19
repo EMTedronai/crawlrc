@@ -18,6 +18,7 @@ rest_wait_both          = true
 show_more               = false
 show_travel_trail       = true
 simple_targeting        = true
+tile_web_mouse_control  = false
 travel_delay            = -1
 user_note_prefix        = --
 
