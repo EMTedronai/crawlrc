@@ -36,19 +36,22 @@ bold_brightens_foreground       = true
 char_set                        = default
 
 # Override the some of the default glyphs with the old unicode glyphs.
+display_char = door_closed : x25fc
 display_char = floor       : x00b7
 display_char = floor_magic : x25e6
 display_char = item_book   : x221e
 
 # Custom wall glyphs (░, ▒, ▓, █).
-feature += crystal wall               { x2593, ,           }
-feature += metal wall                 { x2593, ,           }
-feature += rock wall                  { x2592, ,           }
-feature += stone wall                 { x2592, ,           }
-feature += translucent metal wall     { x2591, , cyan      }
-feature += translucent rock wall      { x2591, , lightcyan }
-feature += translucent stone wall     { x2591, , cyan      }
-feature += unnaturally hard rock wall { x2588, ,           }
+feature += the floor                  {      , , lightgrey  }
+feature += crystal wall               { x2593, , green      }
+feature += metal wall                 { x2593, , cyan       }
+feature += rock wall                  { x2592, , brown      }
+feature += stone wall                 { x2592, , grey       }
+feature += slime covered rock         { x2592, , lightgreen }
+feature += translucent metal wall     { x2591, , cyan       }
+feature += translucent rock wall      { x2591, , lightcyan  }
+feature += translucent stone wall     { x2591, , cyan       }
+feature += unnaturally hard rock wall { x2588, ,            }
 
 mon_glyph ^= ancient lich  : lightmagenta
 mon_glyph ^= greater mummy : lightmagenta
