@@ -24,9 +24,6 @@ user_note_prefix        = --
 # Mute summons messages.
 message_colour ^= mute:Your.*(bites|misses|hits|claws|gores)
 
-# Disable ranged animations (beam spells and ranged weapons)
-use_animations -= beam
-
 ######################################################################
 #                          Console Settings                          #
 ######################################################################
@@ -45,6 +42,7 @@ display_char = item_book   : x221e
 # Custom wall glyphs (░, ▒, ▓, █).
 feature += crystal wall               { x2593, ,           }
 feature += metal wall                 { x2593, ,           }
+feature += rock wall                  { x2592, ,           }
 feature += stone wall                 { x2592, ,           }
 feature += translucent metal wall     { x2591, , cyan      }
 feature += translucent rock wall      { x2591, , lightcyan }
