@@ -211,6 +211,7 @@ force_more_message += Ouch! That really hurt!
 force_more_message += Space bends around you
 force_more_message += Space warps.*around you
 force_more_message += The mighty Pandemonium lord .* resides here
+force_more_message += Training target.*reached
 force_more_message += You are starting to lose your buoyancy
 force_more_message += You feel less protected from missiles
 force_more_message += You feel you are being watched by something
