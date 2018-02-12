@@ -26,6 +26,12 @@ user_note_prefix        = --
 # Mute summons messages.
 message_colour ^= mute:Your.*(bites|misses|hits|claws|gores)
 
+# Improve the viewing experience of webtiles spectators
+tile_font_crt_family  = Comic Sans MS
+tile_font_stat_family = Comic Sans MS
+tile_font_msg_family  = Comic Sans MS
+tile_font_lbl_family  = Comic Sans MS
+
 ######################################################################
 #                          Console Settings                          #
 ######################################################################
